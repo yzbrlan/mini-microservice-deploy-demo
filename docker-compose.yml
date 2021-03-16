@@ -10,7 +10,7 @@ services:
   student-server:
     depends_on:
       - mysql5
-    build: student/
+    build: student-server/
     restart: always
     environment:
       USERNAME: root
