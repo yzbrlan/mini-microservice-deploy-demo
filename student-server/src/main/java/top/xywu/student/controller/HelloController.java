@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import top.xywu.student.config.StudentProperties;
 
+import javax.annotation.Resource;
+
 /**
  * @author xywu
  * @date 2021/02/07
@@ -11,7 +13,7 @@ import top.xywu.student.config.StudentProperties;
 @RestController
 public class HelloController {
 
-    @Autowired
+    @Resource
     private StudentProperties studentProperties;
 
     @GetMapping(value = "/hello")
