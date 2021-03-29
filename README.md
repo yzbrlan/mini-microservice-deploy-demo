@@ -10,26 +10,27 @@
 
 <!-- /TOC -->
 # 1. 后端打包
-首先进入student-server文件夹内部
-
-`cd student-server`
-
-使用maven进行打包
-
-`mvn clean package`
+```
+cd student-server
+mvn clean package
+```
 
 # 2. 前端打包
 ```
 cd frontend
+npm install
 npm run build
 ```
+
 # 3. 运行
 回到上一层目录，使用docker-compose打包镜像
 `docker-compose build`
 
-然后启动
-
+启动
 `docker-compose up -d`
+
+访问页面 
+[localhost:1024](localhost:1024)
 
 停止
 `docker-compose down`
