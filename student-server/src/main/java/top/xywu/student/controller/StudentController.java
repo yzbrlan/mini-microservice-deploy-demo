@@ -1,8 +1,7 @@
 package top.xywu.student.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import top.xywu.student.entity.Student;
 import top.xywu.student.service.StudentService;
 
@@ -14,9 +13,15 @@ import java.util.List;
  * @date 2021/03/29
  */
 @RestController
+//@CrossOrigin(origins = "*",maxAge = 3600)
 public class StudentController {
     @Resource
     StudentService studentService;
+
+    @PostMapping(value = "/students")
+    public Student findByUsername(@RequestBody Student student) {
+        return studentService.save(student);
+    }
 
     @GetMapping(value = "/students")
     public List<Student> findAll() {

@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Bean;
 import top.xywu.student.entity.Student;
 import top.xywu.student.repository.StudentRepository;
 
+import java.util.List;
+
 @SpringBootApplication
 public class StudentApplication {
 
@@ -21,9 +23,8 @@ public class StudentApplication {
             public void run(String... args) throws Exception {
                 Student student = new Student();
                 student.setUsername("admin");
-                if (studentRepository.findStudentByUsername(student.getUsername()) == null) {
-                    student.setAge(18);
-                    student.setGrade("A");
+                List<Student> studentList = studentRepository.findStudentByUsername(student.getUsername());
+                if (studentList == null || studentList.isEmpty()) {
                     student.setPhone("11122223333");
                     studentRepository.save(student);
                 }

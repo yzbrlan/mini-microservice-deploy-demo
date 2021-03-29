@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   mysql5:
     build: mysql/
@@ -6,7 +6,7 @@ services:
       MYSQL_ROOT_PASSWORD: 123456
     networks:
       - mynetwork
-  
+
   student-server:
     depends_on:
       - mysql5
@@ -16,10 +16,18 @@ services:
       USERNAME: root
       PASSWORD: 123456
       DB_URL: mysql5:3306/student
-    links:
-      - mysql5
     ports:
       - 9999:9999
+    networks:
+      - mynetwork
+
+  frontend:
+    depends_on:
+      - student-server
+    build: frontend/
+    restart: always
+    ports:
+      - 1024:80
     networks:
       - mynetwork
 

@@ -14,8 +14,6 @@ public class Student {
     @GeneratedValue
     private Integer id;
 
-    private Integer age;
-    private String grade;
     private String username;
     private String phone;
 
@@ -29,22 +27,6 @@ public class Student {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public String getGrade() {
-        return grade;
-    }
-
-    public void setGrade(String grade) {
-        this.grade = grade;
     }
 
     public String getUsername() {
