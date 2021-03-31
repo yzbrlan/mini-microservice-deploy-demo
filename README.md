@@ -24,16 +24,16 @@ npm run build
 
 # 3. 运行
 回到上一层目录，使用docker-compose打包镜像
-`docker-compose build`
+```docker-compose build```
 
 启动
-`docker-compose up -d`
+```docker-compose up -d```
 
 访问页面 
-[localhost:1024](localhost:1024)
+```[localhost:1024](localhost:1024)```
 
 停止
-`docker-compose down`
+```docker-compose down```
 
 # 4. 技术储备
 ## 4.1. Docker、Docker Compose
