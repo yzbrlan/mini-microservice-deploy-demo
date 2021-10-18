@@ -19,7 +19,7 @@ public class StudentController {
     StudentService studentService;
 
     @PostMapping(value = "/students")
-    public Student findByUsername(@RequestBody Student student) {
+    public Student addNew(@RequestBody Student student) {
         return studentService.save(student);
     }
 
