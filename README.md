@@ -37,7 +37,7 @@ npm run build
 ```docker-compose up -d```
 
 访问页面 
-```[localhost:1024](localhost:1024)```
+[localhost:1024](localhost:1024)
 
 停止
 ```docker-compose down```
