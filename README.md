@@ -36,8 +36,7 @@ npm run build
 启动
 ```docker-compose up -d```
 
-访问页面 
-[localhost:1024](localhost:1024)
+访问页面 `localhost:1024`
 
 停止
 ```docker-compose down```
@@ -54,10 +53,10 @@ npm run build
 
 ```
 NAMESPACE   NAME             TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
-ase-ns-00   frontend         LoadBalancer   172.21.4.194    106.15.42.5   1024:30085/TCP   4m37s
+ase-ns-XX   frontend         LoadBalancer   172.21.4.194    106.15.42.5   1024:30085/TCP   4m37s
 ```
 
-访问 external-ip:1024，即就是 106.15.42.5:1024
+访问 `external-ip:1024`，即就是 `106.15.42.5:1024`
 
 删除
 ```kubectl delete -f k8s-quickstart.yml```
