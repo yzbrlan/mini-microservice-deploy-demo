@@ -101,3 +101,7 @@ use mysql;
 update user set Host='%' where User='root';
 flush privileges;
 ```
+
+### Infrastructure model
+
+![Infrastructure model](.infragenie/infrastructure_model.png)
